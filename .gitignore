@@ -1,0 +1,4 @@
+# No Environment variables
+.env
+# No Node Modules
+node_modules/
