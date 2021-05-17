@@ -1,8 +1,8 @@
 name: Github Actions for Sending ZenQuotes to a Slack Channel
 
 on:
-  schedule:
-  - cron: "0 0 * * 1,5"    
+  push:
+    branches: [ main ]  
 
 jobs:
   zenbot:
