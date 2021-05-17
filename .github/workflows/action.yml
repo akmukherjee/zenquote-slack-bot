@@ -1,8 +1,11 @@
 name: Github Actions for Sending ZenQuotes to a Slack Channel
 
 on:
-  push:
-    branches: [ main ]  
+  workflow_dispatch: 
+  #workflow_dispatch helps run workflow anytime with a single click.
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: "40 * * * *"   
 
 jobs:
   zenbot:
