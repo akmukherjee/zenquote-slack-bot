@@ -1,0 +1,23 @@
+name: Github Actions for Sending ZenQuotes to a Slack Channel
+
+on:
+  schedule:
+  - cron: "0 0 * * 1,5"    
+
+jobs:
+  zenbot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install Node" 
+        uses: actions/setup-node@v2
+
+      - name: "Checkout Code"  
+        uses: actions/checkout@v2
+
+      - name: "Install NPM dependencies"  
+        run: npm install
+
+      - name: "Run Code"  
+        run: npm start
+        env:
+          SLACK_URL:  ${{secrets.SLACK_URL}}        
