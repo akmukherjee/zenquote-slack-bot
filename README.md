@@ -12,4 +12,7 @@ To run the application locally:
 npm start
 ```
 
-And that's it! You should see a Slack Message in the channel you set up the Webhook for. 
+And that's it! You should see a Slack Message in the channel you set up the Webhook for. And you will get something that looks like **this** :
+
+
+![Alt text](SlackImage.png)
